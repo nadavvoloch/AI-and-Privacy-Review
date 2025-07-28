@@ -21,7 +21,7 @@ MERGE (p)-[:BELONGS_TO]->(d);
 // STEP 1
 // Load Actions.csv
 LOAD CSV WITH HEADERS FROM 'file:///Actions.csv' AS row
-MERGE (d:Action {id: toInteger(row.ID), description: row.description});
+MERGE (d:Domain {id: toInteger(row.ID), description: row.description, url: row.url});
 
 // Load PapersActions.csv
 LOAD CSV WITH HEADERS FROM 'file:///PapersActions.csv' AS row
