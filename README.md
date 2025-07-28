@@ -11,7 +11,7 @@ SET p.url = CASE WHEN row.URL IS NULL OR row.URL = '' THEN NULL ELSE row.URL END
 // STEP 1
 // Load Domains.csv
 LOAD CSV WITH HEADERS FROM 'file:///Domains.csv' AS row
-MERGE (d:Domain {id: toInteger(row.ID), description: row.description, url: row.url});
+MERGE (d:Domain {id: toInteger(row.ID), description: row.description, review_url: row.review_url});
 
 // Load PapersDomains.csv
 LOAD CSV WITH HEADERS FROM 'file:///PapersDomains.csv' AS row
