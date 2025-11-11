@@ -1,5 +1,8 @@
 # AI-and-Privacy-Review
+
 https://doi.org/10.5281/zenodo.17584343
+
+
 The csv files are a complete DB for Neo4J.
 Here are the necessary Cypher commands for operating it:
 --------------------------------------------------------
